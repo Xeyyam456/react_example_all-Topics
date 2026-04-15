@@ -1,0 +1,99 @@
+.wrapper {
+  width: 95%;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+/* Rəng açıqlaması */
+.legend {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* Cədvəl horizontal scroll */
+.tableScroll {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Cədvəl */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table th,
+.table td {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f0f0f0;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Rol rəngləri - yalnız badge */
+.badge {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.badge.admin {
+  background-color: #2563eb;
+}
+
+.badge.moderator {
+  background-color: #dc2626;
+}
+
+.badge.user {
+  background-color: #16a34a;
+}
+
+/* Loading */
+.loadingBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  gap: 16px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  border: 5px solid #e0e0e0;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

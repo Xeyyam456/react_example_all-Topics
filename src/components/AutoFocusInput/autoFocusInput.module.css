@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 60px auto;
+  width: fit-content;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.input {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: 2px solid #4d96ff;
+  border-radius: 8px;
+  outline: none;
+  width: 260px;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #1a6edc;
+}

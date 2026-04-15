@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin: 60px auto;
+  transition: background-color 0.4s ease;
+}
+
+/* 6 saniyə və daha çox qaldıqda - yaşıl */
+.normal {
+  background-color: #4caf50;
+}
+
+/* 5 saniyə və az qaldıqda - qırmızı */
+.danger {
+  background-color: #e53935;
+}
+
+.label {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.number {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.warning {
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 6px;
+  animation: blink 0.8s infinite;
+}
+
+.message {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}

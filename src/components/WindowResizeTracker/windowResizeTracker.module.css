@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  padding: 30px 50px;
+  border-radius: 16px;
+  background-color: #0f3460;
+  color: #e0e0e0;
+  width: fit-content;
+}
+
+.title {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f0c040;
+  margin: 0;
+}
+
+.sizeBox {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  background-color: #16213e;
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.label {
+  font-size: 16px;
+  color: #aaaaaa;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.breakpoint {
+  font-size: 15px;
+  color: #f0c040;
+  margin-top: 8px;
+}

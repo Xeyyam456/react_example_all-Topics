@@ -1,0 +1,23 @@
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px;
+    max-width: 300px;
+}
+
+.cardTitle {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+.cardDescription {
+    font-size: 1em;
+    color: #333;
+}
+
+.cardImage {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
