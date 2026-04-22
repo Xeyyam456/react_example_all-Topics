@@ -14,6 +14,11 @@ getTodos() {
       .get(`${DUMMY_BASE_URL}/todos`)
       .then((res) => res.data.todos);
   }
+  getRecipes() {
+    return axios
+      .get(`${DUMMY_BASE_URL}/recipes`)
+      .then((res) => res.data.recipes);
+  }
 
 }
 
