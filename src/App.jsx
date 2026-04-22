@@ -43,7 +43,9 @@ import UseMemoTasks from "./components/UseMemo";
 import UseCallbackTasks from "./components/UseCallback";
 // ── React.memo Tapşırıqları ────────────────────────────────────────
 import ReactMemoTasks from "./components/ReactMemo";// ── Task5: useCallback + React.memo + useMemo ───────────────────
-import UserList from "./components/UserList/UserList";function App() {
+import UserList from "./components/UserList/UserList";
+// ── useId Tapşırıqları ────────────────────────────────────────────
+import StudentList from "./components/StudentList";function App() {
   return (
     <div className="App mt-5">
 
@@ -93,7 +95,9 @@ import UserList from "./components/UserList/UserList";function App() {
       {/* ── React.memo Tapşırıqları ──────── */}
       {/* <ReactMemoTasks /> */}
       {/* ── Task5: useCallback+memo+useMemo ─ */}
-      <UserList />
+      {/* <UserList /> */}
+      {/* ── useId Tapşırıqları ────────────── */}
+      <StudentList />
 
     </div>
   );
