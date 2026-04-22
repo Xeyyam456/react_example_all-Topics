@@ -37,7 +37,13 @@
 // import AutoFocusInput from "./components/AutoFocusInput";
 import UserTable from "./components/UserTable/UserTable";
 import TodoList from "./components/TodoList";
-function App() {
+// ── useMemo Tapşırıqları ──────────────────────────────────────────
+import UseMemoTasks from "./components/UseMemo";
+// ── useCallback Tapşırıqları ──────────────────────────────────────
+import UseCallbackTasks from "./components/UseCallback";
+// ── React.memo Tapşırıqları ────────────────────────────────────────
+import ReactMemoTasks from "./components/ReactMemo";// ── Task5: useCallback + React.memo + useMemo ───────────────────
+import UserList from "./components/UserList/UserList";function App() {
   return (
     <div className="App mt-5">
 
@@ -79,7 +85,15 @@ function App() {
       {/* <CountDown /> */}
       {/* <AutoFocusInput /> */}.
       {/* <UserTable /> */}
-      <TodoList />
+      {/* <TodoList /> */}
+      {/* ── useMemo Tapşırıqları ──────────── */}
+      {/* <UseMemoTasks /> */}
+      {/* ── useCallback Tapşırıqları ─────── */}
+      {/* <UseCallbackTasks /> */}
+      {/* ── React.memo Tapşırıqları ──────── */}
+      {/* <ReactMemoTasks /> */}
+      {/* ── Task5: useCallback+memo+useMemo ─ */}
+      <UserList />
 
     </div>
   );
