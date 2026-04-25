@@ -1,0 +1,138 @@
+.wrapper {
+  min-height: 100vh;
+  background: #2c2c2c;
+  padding: 40px 24px;
+  font-family: "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 32px;
+}
+
+.loading {
+  color: #aaa;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 80px;
+}
+
+/* Grid */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Card */
+.card {
+  background: #c8fff4;
+  border: 2px solid #00e5cc;
+  border-radius: 14px;
+  padding: 20px 16px 16px;
+  width: 200px;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.name {
+  color: #111;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.username {
+  color: #333;
+  font-size: 0.85rem;
+  text-align: center;
+  margin: 0;
+}
+
+.thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Buttons */
+.btn {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.btn:hover {
+  background: #0097a7;
+}
+
+.addedBtn {
+  background: #00695c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: default;
+}
+
+/* Selected box */
+.selectedBox {
+  margin-top: 32px;
+  background: #3a3a3a;
+  border-radius: 16px;
+  padding: 28px 40px;
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.selectedCol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 200px;
+}
+
+.selectedTitle {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.selectedItem {
+  color: #00e5cc;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.selectedThumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #00e5cc;
+}

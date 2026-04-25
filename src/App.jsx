@@ -51,8 +51,8 @@ import CounterReducer from "./components/CounterReducer/CounterReducer";
 import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
 import TodoReducer from "./components/TodoReducer/TodoReducer";
 // ── Recipe Tapşırıqları ───────────────────────────────────────────
-import RecipeList from "./components/RecipeList/RecipeList";
-
+import RecipeList from "./components/RecipeList/RecipeList";// ── Custom Hooks Tapşırıqları ─────────────────────────────────────
+import RecipesManager from "./components/RecipesManager/RecipesManager";
 function App() {
   return (
     <div className="App mt-5">
@@ -113,7 +113,9 @@ function App() {
       {/* Task 3: useReducer for Todo List Operations */}
       {/* <TodoReducer /> */}
       {/* ── Recipe Tapşırıqları ───────────── */}
-      {/* <RecipeList /> */}
+      <RecipeList />
+      {/* ── Custom Hooks ─────────────────── */}
+      {/* <RecipesManager /> */}
 
     </div>
   );
