@@ -48,6 +48,8 @@ import UserList from "./components/UserList/UserList";
 import StudentList from "./components/StudentList";
 // ── useReducer Tapşırıqları ───────────────────────────────────────
 import CounterReducer from "./components/CounterReducer/CounterReducer";
+import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
+import TodoReducer from "./components/TodoReducer/TodoReducer";
 // ── Recipe Tapşırıqları ───────────────────────────────────────────
 import RecipeList from "./components/RecipeList/RecipeList";
 
@@ -106,8 +108,12 @@ function App() {
       {/* <StudentList /> */}
       {/* ── useReducer Tapşırıqları ──────── */}
       {/* <CounterReducer /> */}
+      {/* Task 2: useReducer for Form State Management */}
+      {/* <RegistrationForm /> */}
+      {/* Task 3: useReducer for Todo List Operations */}
+      {/* <TodoReducer /> */}
       {/* ── Recipe Tapşırıqları ───────────── */}
-      <RecipeList />
+      {/* <RecipeList /> */}
 
     </div>
   );
