@@ -97,3 +97,32 @@
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+.detailLink {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.detailLink:hover {
+  text-decoration: underline;
+}
+
+.roleAdmin {
+  color: #dc3545;
+  font-weight: 700;
+}
+
+.roleModerator {
+  color: #fd7e14;
+  font-weight: 700;
+}
+
+.roleUser {
+  color: #198754;
+  font-weight: 700;
+}
+
+.loadingText {
+  margin-top: 8px;
+}

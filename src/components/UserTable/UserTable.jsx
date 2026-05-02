@@ -1,39 +1,42 @@
 import { useState, useEffect } from "react";
+import { Table, Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./userTable.module.css";
 import UserService from "../../services/UserService";
 
-// Rola görə CSS class qaytarır
 function getRoleClass(role) {
-  if (role === "admin") return styles.admin;
-  if (role === "moderator") return styles.moderator;
-  return styles.user;
+  if (role === "admin") return styles.roleAdmin;
+  if (role === "moderator") return styles.roleModerator;
+  return styles.roleUser;
+}
+
+async function GetDatas(setDatas, setLoading) {
+  try {
+    const users = await UserService.getUsers();
+    setDatas(users);
+    toast.success(`${users.length} istifadəçi uğurla yükləndi!`);
+  } catch (err) {
+    toast.error("Xəta: " + err.message);
+  } finally {
+    setLoading(false);
+  }
 }
 
 function UserTable() {
-  const [users, setUsers] = useState([]);
+  const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    UserService.getUsers()
-      .then((users) => {
-        setUsers(users);
-        toast.success(`${users.length} istifadəçi uğurla yükləndi!`);
-      })
-      .catch((err) => {
-        toast.error("Xəta: " + err.message);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    GetDatas(setDatas, setLoading);
   }, []);
 
   if (loading) {
     return (
       <div className={styles.loadingBox}>
-        <div className={styles.spinner}></div>
-        <p>Yüklənir...</p>
+        <Spinner animation="border" variant="primary" />
+        <p className={styles.loadingText}>Yüklənir...</p>
       </div>
     );
   }
@@ -43,10 +46,8 @@ function UserTable() {
       <ToastContainer position="top-right" autoClose={3000} />
       <h2 className={styles.title}>İstifadəçilər</h2>
 
-  
-
       <div className={styles.tableScroll}>
-        <table className={styles.table}>
+        <Table striped bordered hover responsive>
           <thead>
             <tr>
               <th>ID</th>
@@ -59,10 +60,11 @@ function UserTable() {
               <th>Ünvan</th>
               <th>Kart nömrəsi</th>
               <th>Rol</th>
+              <th>Ətraflı</th>
             </tr>
           </thead>
           <tbody>
-            {users.map((user) => (
+            {datas.map((user) => (
               <tr key={user.id}>
                 <td>{user.id}</td>
                 <td>{user.firstName}</td>
@@ -74,14 +76,17 @@ function UserTable() {
                 <td>{user.address?.city}, {user.address?.country}</td>
                 <td>{user.bank?.cardNumber}</td>
                 <td>
-                  <span className={`${styles.badge} ${getRoleClass(user.role)}`}>
-                    {user.role}
-                  </span>
+                  <span className={getRoleClass(user.role)}>{user.role}</span>
+                </td>
+                <td>
+                  <Link to={`/users/${user.id}`} className={styles.detailLink}>
+                    Bax
+                  </Link>
                 </td>
               </tr>
             ))}
           </tbody>
-        </table>
+        </Table>
       </div>
     </div>
   );

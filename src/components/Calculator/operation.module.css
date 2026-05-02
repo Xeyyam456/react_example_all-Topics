@@ -1,0 +1,74 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f4ff;
+  padding: 40px 16px;
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(79, 70, 229, 0.12);
+  padding: 40px 48px;
+  text-align: center;
+  min-width: 320px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 28px;
+}
+
+.expression {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.num {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.operator {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #4f46e5;
+}
+
+.equals {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.result {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #16a34a;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 1.2rem;
+}
+
+.backLink {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}

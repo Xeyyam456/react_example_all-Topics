@@ -9,6 +9,13 @@ class UserService {
       .get(`${DUMMY_BASE_URL}/users`)
       .then((res) => res.data.users);
   }
+
+  // ID ilə bir istifadəçini gətir
+  getUserById(id) {
+    return axios
+      .get(`${DUMMY_BASE_URL}/users/${id}`)
+      .then((res) => res.data);
+  }
 getTodos() {
     return axios
       .get(`${DUMMY_BASE_URL}/todos`)
