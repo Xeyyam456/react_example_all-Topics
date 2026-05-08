@@ -1,9 +1,10 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import UserTable from './components/UserTable/UserTable';
 import UserDetail from './components/UserDetail/UserDetail';
 import Home from './components/Calculator/Home';
 import Operation from './components/Calculator/Operation';
 import { ROUTER } from './router/routes';
+import Products from './components/Products/Products';
 
 // Restaurant
 import RestaurantLayout from './components/Restaurant/Layout/RestaurantLayout';
@@ -19,16 +20,19 @@ import ProductDetail from './components/Restaurant/Menu/ProductDetail';
 function App() {
   return (
     <Routes>
+      {/* <Route path='/' element={<Navigate to='/restaurant' replace />} /> */}
+      <Route path='/products' element={<Products />} />
+
       {/* Users */}
       {/* <Route path='/' element={<div className='App mt-5'><UserTable /></div>} /> */}
       {/* <Route path='/users/:id' element={<UserDetail />} /> */}
 
       {/* Calculator */}
-      {/* <Route path={ROUTER.HOME} element={<Home />} />
-      <Route path={ROUTER.OPERATION} element={<Operation />} /> */}
+      {/* <Route path={ROUTER.HOME} element={<Home />} /> */}
+       {/* <Route path={ROUTER.OPERATION} element={<Operation />} />  */}
 
       {/* Restaurant */}
-      <Route path='/restaurant' element={<RestaurantLayout />}>
+      {/* <Route path='/restaurant' element={<RestaurantLayout />}>
         <Route index element={<RestaurantHome />} />
         <Route path='about' element={<About />}>
           <Route index element={<AboutOverview />} />
@@ -38,7 +42,7 @@ function App() {
         <Route path='contact' element={<Contact />} />
         <Route path='menu' element={<Menu />} />
         <Route path='menu/:id' element={<ProductDetail />} />
-      </Route>
+      </Route> */}
     </Routes>
   );
 }
