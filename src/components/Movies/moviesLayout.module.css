@@ -1,0 +1,78 @@
+.container {
+  min-height: 100vh;
+  background: #0d0d1a;
+  color: #e5e5e5;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: #0a0a15;
+  border-bottom: 2px solid #f5c518;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f5c518;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.watchlistLink {
+  padding: 8px 22px;
+  border: 2px solid #f5c518;
+  border-radius: 999px;
+  color: #f5c518;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.watchlistLink:hover,
+.watchlistActive {
+  background: #f5c518;
+  color: #0d0d1a;
+}
+
+/* ── Year nav ────────────────────────────────────────── */
+.yearNav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 14px 32px;
+  background: #111122;
+  border-bottom: 1px solid #1e1e3a;
+}
+
+.yearBtn {
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: 1px solid #2e2e50;
+  background: transparent;
+  color: #888;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.yearBtn:hover {
+  border-color: #f5c518;
+  color: #f5c518;
+}
+
+.activeYear {
+  background: #f5c518;
+  border-color: #f5c518;
+  color: #0d0d1a;
+}
+
+/* ── Main ────────────────────────────────────────────── */
+.main {
+  padding: 32px;
+}

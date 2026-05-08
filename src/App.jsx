@@ -6,6 +6,12 @@ import Operation from './components/Calculator/Operation';
 import { ROUTER } from './router/routes';
 import Products from './components/Products/Products';
 
+// Movies
+import MoviesLayout from './components/Movies/MoviesLayout';
+import MoviesByYear from './components/Movies/MoviesByYear';
+import MovieDetail from './components/Movies/MovieDetail';
+import Watchlist from './components/Movies/Watchlist';
+
 // Restaurant
 import RestaurantLayout from './components/Restaurant/Layout/RestaurantLayout';
 import RestaurantHome from './components/Restaurant/Home/RestaurantHome';
@@ -20,8 +26,16 @@ import ProductDetail from './components/Restaurant/Menu/ProductDetail';
 function App() {
   return (
     <Routes>
-      {/* <Route path='/' element={<Navigate to='/restaurant' replace />} /> */}
-      <Route path='/products' element={<Products />} />
+      {/* Root redirect */}
+      <Route path='/' element={<Navigate to='/movies' replace />} />
+
+      {/* Movies — nested routing by year */}
+      <Route path='/movies' element={<MoviesLayout />}>
+        <Route index element={<Navigate to='/movies/2024' replace />} />
+        <Route path='watchlist' element={<Watchlist />} />
+        <Route path=':year' element={<MoviesByYear />} />
+        <Route path=':year/:id' element={<MovieDetail />} />
+      </Route>
 
       {/* Users */}
       {/* <Route path='/' element={<div className='App mt-5'><UserTable /></div>} /> */}
