@@ -1,12 +1,12 @@
 .wrapper {
-  position: fixed;
-  inset: 0;
-  overflow: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100%;
+  padding: 40px 16px;
   background: #000;
   font-family: "Segoe UI", sans-serif;
+  box-sizing: border-box;
 }
 
 .card {

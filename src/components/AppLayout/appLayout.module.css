@@ -1,0 +1,156 @@
+/* ── Root wrapper ────────────────────────────────────────────── */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────── */
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #1e1e2e;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: width 0.25s ease;
+  overflow: hidden;
+}
+
+.sidebar.collapsed {
+  width: 48px;
+}
+
+/* ── Sidebar header ──────────────────────────────────────────── */
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 14px;
+  border-bottom: 1px solid #2e2e4e;
+  gap: 8px;
+  min-height: 56px;
+}
+
+.brand {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #a78bfa;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+.toggleBtn {
+  background: #2e2e4e;
+  border: none;
+  color: #a78bfa;
+  cursor: pointer;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.toggleBtn:hover {
+  background: #3e3e6e;
+}
+
+/* ── Nav ─────────────────────────────────────────────────────── */
+.nav {
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* ── Single top-level link ───────────────────────────────────── */
+.link {
+  display: block;
+  padding: 10px 20px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-left: 3px solid transparent;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.link:hover {
+  background: #2e2e4e;
+  color: #e2e8f0;
+}
+
+.activeLink {
+  color: #a78bfa;
+  border-left-color: #a78bfa;
+  background: rgba(167, 139, 250, 0.1);
+}
+
+/* ── Collapsible group ───────────────────────────────────────── */
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.groupTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 20px;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s;
+  margin-top: 6px;
+}
+
+.groupTitle:hover {
+  color: #94a3b8;
+}
+
+.arrow {
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+
+.groupLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.groupLinks .link {
+  padding-left: 32px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-left-color: transparent;
+  border-left-width: 2px;
+}
+
+.groupLinks .activeLink {
+  color: #a78bfa;
+  border-left-color: #a78bfa;
+  background: rgba(167, 139, 250, 0.08);
+}
+
+/* ── Main content ────────────────────────────────────────────── */
+.main {
+  flex: 1;
+  overflow-y: auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}

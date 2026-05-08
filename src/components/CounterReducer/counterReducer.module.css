@@ -4,16 +4,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  width: 100vw;
+  min-height: 100%;
   background: #181818;
   font-family: "Segoe UI", sans-serif;
   gap: 20px;
-  margin: 0;
+  padding: 40px 16px;
   box-sizing: border-box;
-  position: fixed;
-  inset: 0;
-  overflow: auto;
 }
 
 /* Card */
