@@ -1,0 +1,24 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 60vh;
+}
+
+.hero {
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}

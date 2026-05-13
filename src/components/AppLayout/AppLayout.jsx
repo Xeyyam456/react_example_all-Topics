@@ -18,6 +18,10 @@ const NAV = [
     path: '/products',
   },
   {
+    section: '🏪 Shop',
+    path: '/shop',
+  },
+  {
     section: '🧮 Calculator',
     path: '/calculator',
   },

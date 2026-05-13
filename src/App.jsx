@@ -1,5 +1,8 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 
+// ── Welcome ──────────────────────────────────────────────────────────────────
+import Welcome from './components/Welcome/Welcome';
+
 // ── Layout ──────────────────────────────────────────────────────────────────
 import AppLayout from './components/AppLayout/AppLayout';
 
@@ -21,7 +24,11 @@ import Menu             from './components/Restaurant/Menu/Menu';
 import ProductDetail    from './components/Restaurant/Menu/ProductDetail';
 
 // ── Products ────────────────────────────────────────────────────────────────
-import Products from './components/Products/Products';
+import Products from './components/ShopHome/Products/Products';
+
+// ── Shop ─────────────────────────────────────────────────────────────────────
+import ShopHome          from './components/ShopHome/ShopHome';
+import ShopProductDetail from './components/ShopHome/ProductDetail/ShopProductDetail';
 
 // ── Calculator ──────────────────────────────────────────────────────────────
 import CalcHome      from './components/Calculator/Home';
@@ -62,11 +69,11 @@ import WindowResizeTracker from './components/WindowResizeTracker/WindowResizeTr
 function App() {
   return (
     <Routes>
-      {/* Root → Movies */}
-      <Route path='/' element={<Navigate to='/movies' replace />} />
-
       {/* ── Global sidebar layout wraps everything ── */}
       <Route element={<AppLayout />}>
+
+        {/* Root → Welcome */}
+        <Route path='/' element={<Welcome />} />
 
         {/* Movies */}
         <Route path='/movies' element={<MoviesLayout />}>
@@ -91,6 +98,11 @@ function App() {
 
         {/* Products */}
         <Route path='/products' element={<Products />} />
+
+        {/* Shop */}
+        <Route path='/shop'            element={<ShopHome />} />
+        <Route path='/shop/:section'   element={<ShopHome />} />
+        <Route path='/shop/products/detail/:id' element={<ShopProductDetail />} />
 
         {/* Calculator */}
         <Route path='/calculator'                        element={<CalcHome />} />

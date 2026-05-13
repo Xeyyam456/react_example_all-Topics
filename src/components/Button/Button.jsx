@@ -1,16 +1,13 @@
-import styles from "./button.module.css";
-import React from 'react'
+import styles from './button.module.css';
 
-const Button = ({ label, Click }) => {
-    return (
-
-        <button
-            className={styles.btn}
-            onClick={Click}>
-            {label}
-        </button>
-
-    )
+function Button({ children, onClick, variant = 'primary', disabled = false, type = 'button' }) {
+  const cls = [styles.btn, styles[variant]].filter(Boolean).join(' ');
+  return (
+    <button className={cls} onClick={onClick} disabled={disabled} type={type}>
+      {children}
+    </button>
+  );
 }
 
-export default Button
+export default Button;
+

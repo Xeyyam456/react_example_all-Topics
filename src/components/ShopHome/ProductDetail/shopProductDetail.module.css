@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap');
+
+.wrapper {
+  max-width:1000px; margin:56px auto; padding:0 32px;
+}
+.backLink {
+  display:inline-flex; align-items:center; gap:6px; margin-bottom:28px;
+  color:#a78bfa; text-decoration:none; font-weight:700; font-size:.92rem;
+  letter-spacing:.04em; transition:color .2s,gap .2s;
+  background:none; border:none; cursor:pointer; padding:0; font-family:inherit;
+}
+.backLink:hover { color:#c4b5fd; gap:10px; }
+
+.card {
+  background:linear-gradient(145deg,#13101f,#0f0d1a);
+  border:1px solid rgba(255,255,255,.08); border-radius:20px;
+  box-shadow:0 8px 48px rgba(0,0,0,.5); display:grid;
+  grid-template-columns:1fr 1fr; gap:48px; padding:40px;
+}
+@media(max-width:640px){ .card{ grid-template-columns:1fr; } }
+
+.gallery { display:flex; flex-direction:column; gap:14px; }
+.mainImg {
+  width:100%; height:320px; object-fit:contain; border-radius:14px;
+  background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.07);
+}
+.thumbRow { display:flex; gap:10px; flex-wrap:wrap; }
+.thumb {
+  width:64px; height:64px; object-fit:cover; border-radius:10px;
+  border:2px solid rgba(255,255,255,.1); cursor:pointer; transition:border-color .2s,transform .2s;
+}
+.thumb:hover { border-color:#a78bfa; transform:scale(1.08); }
+
+.info { display:flex; flex-direction:column; gap:14px; }
+.category {
+  display:inline-block; background:rgba(167,139,250,.15); color:#a78bfa;
+  font-size:.78rem; font-weight:700; padding:5px 14px; border-radius:999px;
+  text-transform:capitalize; width:fit-content; letter-spacing:.06em;
+  border:1px solid rgba(167,139,250,.3);
+}
+.title { font-size:1.7rem; font-weight:800; color:#f1f5f9; margin:0; font-family:'Playfair Display',serif; line-height:1.25; }
+.brand { color:rgba(241,245,249,.5); font-size:.92rem; margin:0; }
+.description { color:rgba(241,245,249,.65); font-size:.95rem; line-height:1.7; margin:0; }
+.priceRow { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+.price { font-size:2.2rem; font-weight:900; color:#34d399; }
+.discount {
+  background:rgba(52,211,153,.15); color:#34d399; font-size:.82rem; font-weight:700;
+  padding:5px 12px; border-radius:999px; border:1px solid rgba(52,211,153,.3);
+}
+.meta { display:flex; gap:24px; flex-wrap:wrap; }
+.metaItem {
+  background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08);
+  border-radius:8px; padding:8px 16px; font-size:.85rem; color:rgba(241,245,249,.65);
+  font-weight:600;
+}
+.status { text-align:center; padding:60px; color:rgba(241,245,249,.55); font-size:1.1rem; }
+.error { text-align:center; padding:60px; color:#fca5a5; font-size:1.1rem; }
