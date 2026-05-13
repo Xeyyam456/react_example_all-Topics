@@ -26,6 +26,17 @@ import ProductDetail    from './components/Restaurant/Menu/ProductDetail';
 // ── Products ────────────────────────────────────────────────────────────────
 import Products from './components/ShopHome/Products/Products';
 
+// ── Cart ─────────────────────────────────────────────────────────────────────
+import AddCartPage from './components/Cart/AddCartPage';
+import CartPage    from './components/Cart/CartPage';
+
+// ── Employee ──────────────────────────────────────────────────────────────────
+import EmployeeLayout from './components/Employee/EmployeeLayout';
+import EmployeeTable  from './components/Employee/UserTable';
+import AddUser        from './components/Employee/AddUser';
+import UpdatePage     from './components/Employee/UpdatePage';
+import UserInfo       from './components/Employee/UserInfo';
+
 // ── Shop ─────────────────────────────────────────────────────────────────────
 import ShopHome          from './components/ShopHome/ShopHome';
 import ShopProductDetail from './components/ShopHome/ProductDetail/ShopProductDetail';
@@ -103,6 +114,18 @@ function App() {
         <Route path='/shop'            element={<ShopHome />} />
         <Route path='/shop/:section'   element={<ShopHome />} />
         <Route path='/shop/products/detail/:id' element={<ShopProductDetail />} />
+
+        {/* Cart */}
+        <Route path='/add'  element={<AddCartPage />} />
+        <Route path='/cart' element={<CartPage />} />
+
+        {/* Employee */}
+        <Route path='/employee' element={<EmployeeLayout />}>
+          <Route index                element={<EmployeeTable />} />
+          <Route path='add'          element={<AddUser />} />
+          <Route path='update/:id'   element={<UpdatePage />} />
+          <Route path='info/:id'     element={<UserInfo />} />
+        </Route>
 
         {/* Calculator */}
         <Route path='/calculator'                        element={<CalcHome />} />

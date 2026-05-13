@@ -22,7 +22,19 @@ const NAV = [
     path: '/shop',
   },
   {
-    section: '🧮 Calculator',
+    section: '🛒 Cart',
+    children: [
+      { label: 'Add Item', path: '/add' },
+      { label: 'Cart',     path: '/cart' },
+    ],
+  },
+  {    section: '👥 Employee',
+    children: [
+      { label: 'User Table', path: '/employee' },
+      { label: 'Add User',   path: '/employee/add' },
+    ],
+  },
+  {    section: '🧮 Calculator',
     path: '/calculator',
   },
   {
