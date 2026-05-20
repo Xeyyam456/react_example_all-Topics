@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import styles from './appLayout.module.css';
+import useThemeStore from '../../store/useThemeStore';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 // ─── Sidebar navigation config ────────────────────────────────────────────────
 
@@ -132,20 +134,24 @@ function SidebarGroup({ item }) {
 
 function AppLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const { isDark } = useThemeStore();
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${isDark ? styles.dark : styles.light}`}>
       {/* ── Sidebar ── */}
       <aside className={`${styles.sidebar} ${sidebarOpen ? '' : styles.collapsed}`}>
         <div className={styles.sidebarHeader}>
           {sidebarOpen && <span className={styles.brand}>⚡ DevHub</span>}
-          <button
-            className={styles.toggleBtn}
-            onClick={() => setSidebarOpen((prev) => !prev)}
-            title="Sidebar-ı aç/bağla"
-          >
-            {sidebarOpen ? '◀' : '▶'}
-          </button>
+          <div className={styles.headerActions}>
+            <ThemeToggle />
+            <button
+              className={styles.toggleBtn}
+              onClick={() => setSidebarOpen((prev) => !prev)}
+              title="Sidebar-ı aç/bağla"
+            >
+              {sidebarOpen ? '◀' : '▶'}
+            </button>
+          </div>
         </div>
 
         {sidebarOpen && (

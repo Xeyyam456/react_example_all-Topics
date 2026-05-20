@@ -3,6 +3,20 @@
   display: flex;
   min-height: 100vh;
   background: #f4f6f9;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ── Light theme ─────────────────────────────────────────────── */
+.light {
+  --main-bg: #f4f6f9;
+  --main-color: #1e293b;
+}
+
+/* ── Dark theme ──────────────────────────────────────────────── */
+.dark {
+  --main-bg: #0f172a;
+  --main-color: #e2e8f0;
+  background: #0f172a;
 }
 
 /* ── Sidebar ─────────────────────────────────────────────────── */
@@ -30,6 +44,13 @@
   border-bottom: 1px solid #2e2e4e;
   gap: 8px;
   min-height: 56px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
 }
 
 .brand {
@@ -153,4 +174,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
+  background: var(--main-bg, #f4f6f9);
+  color: var(--main-color, #1e293b);
+  transition: background 0.3s ease, color 0.3s ease;
 }
