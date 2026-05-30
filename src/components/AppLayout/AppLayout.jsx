@@ -47,6 +47,7 @@ const NAV = [
     section: '📋 Reducers',
     children: [
       { label: 'Counter Reducer', path: '/demos/counter-reducer' },
+      { label: 'Redux Counter',     path: '/demos/redux-counter' },
       { label: 'Todo Reducer',    path: '/demos/todo-reducer' },
       { label: 'Registration',    path: '/demos/registration' },
     ],

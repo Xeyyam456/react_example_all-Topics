@@ -1,0 +1,130 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 48px 24px;
+  min-height: 100vh;
+}
+
+/* ── Başlıq ── */
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #a78bfa;
+  margin: 0;
+}
+
+/* ── Count sətri: [ - ]  [ 0 ]  [ + ] ── */
+.counterRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Dairəvi "-" və "+" düymələri */
+.circleBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: #2e2e4e;
+  color: #e2e8f0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circleBtn:hover {
+  background: #4c3d8f;
+  transform: scale(1.1);
+}
+
+/* Count dəyərinin göstərildiyi qutu */
+.countDisplay {
+  min-width: 80px;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #f8fafc;
+  background: #1e1e2e;
+  border-radius: 12px;
+  padding: 8px 20px;
+}
+
+/* ── Input sahəsi ── */
+.input {
+  width: 280px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 2px solid #2e2e4e;
+  background: #1e1e2e;
+  color: #e2e8f0;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  text-align: center;
+}
+
+.input:focus {
+  border-color: #a78bfa;
+}
+
+.input::placeholder {
+  color: #64748b;
+}
+
+/* ── Düymə sıraları ── */
+.actionRow {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 11px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+  transform: scale(1.04);
+}
+
+/* Addition — yaşıl */
+.addBtn {
+  background: #16a34a;
+  color: #fff;
+}
+
+.addBtn:hover {
+  background: #15803d;
+}
+
+/* Subtract — qırmızı */
+.subBtn {
+  background: #dc2626;
+  color: #fff;
+}
+
+.subBtn:hover {
+  background: #b91c1c;
+}
+
+/* Reset — boz */
+.resetBtn {
+  background: #374151;
+  color: #e2e8f0;
+  padding: 10px 40px;
+}
+
+.resetBtn:hover {
+  background: #4b5563;
+}

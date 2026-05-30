@@ -52,6 +52,7 @@ import UserList   from './components/UserList/UserList';
 
 // ── Reducers ────────────────────────────────────────────────────────────────
 import CounterReducer    from './components/CounterReducer/CounterReducer';
+import ReduxCounter      from './components/ReduxCounter/ReduxCounter';
 import TodoReducer       from './components/TodoReducer/TodoReducer';
 import RegistrationForm  from './components/RegistrationForm/RegistrationForm';
 
@@ -138,6 +139,7 @@ function App() {
 
         {/* Reducer demos */}
         <Route path='/demos/counter-reducer' element={<CounterReducer />} />
+        <Route path='/demos/redux-counter'   element={<ReduxCounter />} /> {/* <-- Yeni əlavə olunan demo */}
         <Route path='/demos/todo-reducer'    element={<TodoReducer />} />
         <Route path='/demos/registration'    element={<RegistrationForm />} />
 
