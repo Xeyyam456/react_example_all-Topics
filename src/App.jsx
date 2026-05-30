@@ -50,6 +50,9 @@ import UserTable  from './components/UserTable/UserTable';
 import UserDetail from './components/UserDetail/UserDetail';
 import UserList   from './components/UserList/UserList';
 
+// ── Reading Wishlist ────────────────────────────────────────────────────────────────
+import ReadingWishlist from './components/ReadingWishlist/ReadingWishlist';
+
 // ── Todo App ────────────────────────────────────────────────────────────────
 import TodoApp from './components/TodoApp/TodoApp';
 
@@ -130,6 +133,9 @@ function App() {
           <Route path='update/:id'   element={<UpdatePage />} />
           <Route path='info/:id'     element={<UserInfo />} />
         </Route>
+
+        {/* Reading Wishlist */}
+        <Route path='/reading-wishlist' element={<ReadingWishlist />} />
 
         {/* Todo App */}
         <Route path='/todo-app' element={<TodoApp />} />
