@@ -50,6 +50,9 @@ import UserTable  from './components/UserTable/UserTable';
 import UserDetail from './components/UserDetail/UserDetail';
 import UserList   from './components/UserList/UserList';
 
+// ── Todo App ────────────────────────────────────────────────────────────────
+import TodoApp from './components/TodoApp/TodoApp';
+
 // ── Reducers ────────────────────────────────────────────────────────────────
 import CounterReducer    from './components/CounterReducer/CounterReducer';
 import ReduxCounter      from './components/ReduxCounter/ReduxCounter';
@@ -127,6 +130,9 @@ function App() {
           <Route path='update/:id'   element={<UpdatePage />} />
           <Route path='info/:id'     element={<UserInfo />} />
         </Route>
+
+        {/* Todo App */}
+        <Route path='/todo-app' element={<TodoApp />} />
 
         {/* Calculator */}
         <Route path='/calculator'                        element={<CalcHome />} />

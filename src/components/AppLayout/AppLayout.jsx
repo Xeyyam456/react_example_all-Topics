@@ -8,6 +8,10 @@ import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 const NAV = [
   {
+    section: '✅ Todo App',
+    path: '/todo-app',
+  },
+  {
     section: '🎬 Movies',
     path: '/movies',
   },
